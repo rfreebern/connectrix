@@ -59,47 +59,47 @@
 
 	const rowSolution = [
 		{
-			items: ['ONE', 'TWO', 'THREE', 'FOUR'],
-			category: "A",
+			items: ['CALL', 'RAISE', 'ANTE', 'BLUFF'],
+			category: "POKER TERMS",
 			complete: "🟩",
 		},
 		{
-			items: ['FIVE', 'SIX', 'SEVEN', 'EIGHT'],
-			category: "B",
+			items: ['TIME', 'AIR', 'CAPITAL', 'GLACIER'],
+			category: "THINGS THAT FLOW",
 			complete: "🟦",
 		},
 		{
-			items: ['NINE', 'TEN', 'ELEVEN', 'TWELVE'],
-			category: "C",
+			items: ['HAND', 'SHARE', 'GRANT', 'PASS'],
+			category: "GIVE",
 			complete: "🟪",
 
 		},
 		{
-			items: ['THIRTEEN', 'FOURTEEN', 'FIFTEEN', 'SIXTEEN'],
-			category: "D",
+			items: ['DECK', 'PITCH', 'SEED', 'BURN'],
+			category: "SAID AT A VC MEETING",
 			complete: "🟨",
 		}
 	];
 
 	const colSolution = [
 		{
-			items: ['ONE', 'FIVE', 'NINE', 'THIRTEEN'],
-			category: "E",
+			items: ['CALL', 'TIME', 'HAND', 'DECK'],
+			category: "ON _____",
 			complete: "♥",
 		},
 		{
-			items: ['TWO', 'SIX', 'TEN', 'FOURTEEN'],
-			category: "F",
+			items: ['RAISE', 'AIR', 'SHARE', 'PITCH'],
+			category: "BRING TO LIGHT",
 			complete: "♣",
 		},
 		{
-			items: ['THREE', 'SEVEN', 'ELEVEN', 'FIFTEEN'],
-			category: "G",
+			items: ['ANTE', 'CAPITAL', 'GRANT', 'SEED'],
+			category: "MONEY TO START WITH",
 			complete: "♦",
 		},
 		{
-			items: ['FOUR', 'EIGHT', 'TWELVE', 'SIXTEEN'],
-			category: "H",
+			items: ['BLUFF', 'GLACIER', 'PASS', 'BURN'],
+			category: "GEOGRAPHICAL FEATURES",
 			complete: "♠",
 		}
 	];
