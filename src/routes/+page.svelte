@@ -273,7 +273,7 @@
 
 	.grid .row, .tiles .row {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 0.2rem;
 		margin: 0 0 0.2rem 0;
 	}
