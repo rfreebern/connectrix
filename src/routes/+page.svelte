@@ -57,6 +57,28 @@
 		}
 	}
 
+	// Laid out for ease of visualization. The column items are populated automatically, below.
+	const solution = [
+		{ items:  [ "A", "B", "C", "D" ], "category": "ONE" },
+		{ items:  [ "E", "F", "G", "H" ], "category": "TWO" },
+		{ items:  [ "I", "J", "K", "L" ], "category": "THREE" },
+		{ items:  [ "M", "N", "O", "P" ], "category": "FOUR" },
+		{ category: "FIVE" },
+		{ category:      "SIX" },
+		{ category:           "SEVEN" },
+		{ category:                "EIGHT" }
+	];
+
+	// This populates the column solutions with the proper items from the rows.
+	for (let i = 0; i < 4; i++) {
+		solution[i + 4].items = [];
+		for (let j = 0; j < 4; j++) {
+			solution[i + 4].items.push(solution[j].items[i]);
+		}
+		solution[i].color = `--color-${i}`;
+		solution[i + 4].color = `--color-${i + 4}`;
+	}
+
 	const rowSolution = [
 		{
 			items: ['CALL', 'RAISE', 'ANTE', 'BLUFF'],
@@ -104,7 +126,7 @@
 		}
 	];
 
-	const words = rowSolution.map((r) => r.items).reduce((acc, curr) => acc.concat(curr));
+	const words = solution.slice(0, 4).map((r) => r.items).reduce((acc, curr) => acc.concat(curr));
 	shuffle(words);
 
 	export function wordAt(row, col) {
@@ -228,7 +250,7 @@
 							on:drop={noDrop}
 							data-word={wordAt(row, column)}
 							id={`r${row}c${column}`}>
-							{wordAt(row, column)}<br/>
+							{words[row * 4 + column]}<br>
 						</div>
 					</div>
 				{/each}
@@ -255,6 +277,17 @@
 {/if}
 
 <style>
+	:root {
+		--color-0: rgba(26, 255, 26, 1);
+		--color-1: rgba(255, 194, 10, 1);
+		--color-2: rgba(12, 123, 220, 1);
+		--color-3: rgba(93, 58, 155, 1);
+		--color-4: rgba(153, 79, 0, 1);
+		--color-5: rgba(230, 97, 0, 1);
+		--color-6: rgba(220, 50, 32, 1);
+		--color-7: rgba(212, 17, 89, 1);
+	}
+
 	.grid, .tiles, .categories {
 		--width: min(100vw, 50vh, 420px);
 		max-width: var(--width);
